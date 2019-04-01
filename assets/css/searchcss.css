@@ -1,0 +1,23 @@
+* {
+    /* text-align: center; */
+}
+
+.easysearch {
+    margin: 5px 5px 10px 5px;
+    padding: 5px 5px 10px 5px;
+    border-style: solid;
+}
+
+h3 {
+    text-align: center;
+}
+
+.placeholder1234 {
+    border-style: solid;
+}
+
+.easygenerate {
+    margin: 10px 5px 5px 5px;
+    padding: 10px 5px 5px 5px;
+    text-align: center;
+}

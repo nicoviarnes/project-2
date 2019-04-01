@@ -1,15 +1,128 @@
 <!DOCTYPE html>
+<html class="no-js" lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Search Page</title>
         <meta name="description" content="">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="assets/css/searchcss.css"/>
+        <link rel="stylesheet" href="css/icons/foundation-icons.css">
+        <link rel="stylesheet" href="css/foundation.css">
+        <link rel="stylesheet" href="css/app.css">
     </head>
     <body>
-<!-- Ez search bar -->
-<!-- advanced search with + and dropdown -->
-        <script src="" async defer></script>
+
+<!-- quick search bar -->
+    <div class="row">
+        <div class="small-1 medium-1 large-1 columns"></div>
+        <div class="small-10 medium-10 large-10 columns easysearch">      
+
+            <div><h3>Quick Search</h3></div>
+
+            <!-- these tables are place holders that don't appear until the Search button is pressed-->
+            <div class="row">
+                <table class="striped hover stack table-scroll">
+                    <tr>
+                        <th>Vocal</th>
+                        <th>Guitar</th>
+                        <th>Bass</th>
+                        <th>Drummer</th>
+                    </tr>
+                    <tr>
+                        <td><img src="assets/images/vocal1.png" alt="ProfilePic" style="width:100px;height:100px;"></td>
+                        <td><img src="assets/images/guitar1.png" alt="ProfilePic" style="width:100px;height:100px;"></td>
+                        <td><img src="assets/images/bass1.png" alt="ProfilePic" style="width:100px;height:100px;"></td>
+                        <td><img src="assets/images/drum1.png" alt="ProfilePic" style="width:100px;height:100px;"></td>
+                    </tr>
+                    <tr>
+                        <td>Skillset Icons</td>
+                        <td>Skillset Icons</td>
+                        <td>Skillset Icons</td>
+                        <td>Skillset Icons</td>
+                    </tr>
+                    <tr>
+                        <td>Location</td>
+                        <td>Location</td>
+                        <td>Location</td>
+                        <td>Location</td>
+                    </tr>
+                </table>
+            </div>
+
+            <button class="button expanded large easygenerate">Search</button>
+
+        </div>
+        <div class="small-1 medium-1 large-1 columns"></div>
+    </div>
+
+<!-- advanced search -->
+    <div class="row">
+        <div class="small-1 medium-1 large-1 columns"></div>
+
+        <!-- Needs to be center -->
+        
+        <div class="small-10 medium-10 large-10 columns easysearch">        
+            <div><h3>Advanced Search</h3></div>
+            <ul class="dropdown menu" data-dropdown-menu>
+                <li><a href="#">Music Preference</a>
+                    <ul class="menu vertical">
+                        <li><a href="#">Acoustic</a></li>
+                        <li><a href="#">Alternative</a></li>
+                        <li><a href="#">Blues</a></li>
+                        <li><a href="#">Rock</a></li>
+                        <li><a href="#">Country</a></li>
+                        <li><a href="#">Classical</a></li>
+                        <li><a href="#">Hiphop</a></li>
+                        <li><a href="#">Heavy Metal</a></li>
+                        <li><a href="#">Mediterranean</a></li>
+                        <li><a href="#">Latin</a></li>
+                        <li><a href="#">Punk</a></li>
+                        <li><a href="#">Reggae</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- These are place holder dropdown menus don't appear untill the add another member is pressed is pressed -->
+
+            <ul class="dropdown menu" data-dropdown-menu>
+                <li><a href="#">Skill</a>
+                    <ul class="menu vertical">
+                        <li><a href="#">Bass guitar</a></li>
+                        <li><a href="#">Brass</a></li>
+                        <li><a href="#">Cello</a></li>
+                        <li><a href="#">Clarinet</a></li>
+                        <li><a href="#">Drum</a></li>
+                        <li><a href="#">Flute</a></li>
+                        <li><a href="#">Guitar</a></li>
+                        <li><a href="#">Keyboards</a></li>
+                        <li><a href="#">Piano</a></li>
+                        <li><a href="#">Percussion</a></li>
+                        <li><a href="#">Saxophone</a></li>
+                        <li><a href="#">String</a></li>
+                        <li><a href="#">Trumpet</a></li>
+                        <li><a href="#">Ukulele</a></li>
+                        <li><a href="#">Woodwinds</a></li>
+                        <li><a href="#">Violin</a></li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <!-- should keep adding more skill preference aka another member everytime you press it -->
+            
+            <button class="button"><i class="fi-plus"></i> Add Another Member</button>
+
+        </div>
+        <div class="small-1 medium-1 large-1 columns"></div>
+    </div>
+
+
+
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+    <script src="assets/js/searchjs.js"></script>
     </body>
 </html>

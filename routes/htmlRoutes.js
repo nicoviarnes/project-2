@@ -10,13 +10,23 @@ module.exports = function(app) {
     res.render("login");
   });
 
+  app.get("/logout", function(req, res) {
+    if (req.session.loggedin) {
+      req.session.loggedin = false
+      res.redirect("/")
+    } else {
+      res.send("You are already logged out");
+    }
+    res.end();
+  });
+
   app.get("/register", function(req, res) {
     res.render("register");
   });
 
   app.get("/dashboard", function(req, res) {
     if (req.session.loggedin) {
-      res.send("Welcome back, " + req.session.username + "!");
+      return res.render("dashboard")
     } else {
       res.send("Please login to view this page!");
     }

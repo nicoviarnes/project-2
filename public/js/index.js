@@ -15,6 +15,15 @@ const newUser = event => {
   var $email = $("#email")
     .val()
     .trim();
+  var $address = $("#address")
+    .val()
+    .trim();
+  var $city = $("#city")
+    .val()
+    .trim();
+  var $state = $("#state")
+    .val()
+    .trim();
   var $instruments = $("#instruments")
     .val()
     .trim();
@@ -31,12 +40,15 @@ const newUser = event => {
     firstName: $firstName,
     lastName: $lastName,
     email: $email,
+    address: $address,
+    city: $city,
+    state: $state,
     instruments: $instruments,
     genres: $genres,
     bio: $bio
   };
 
-  console.log(user)
+  console.log(user);
 
   $.post("/register", user);
 };

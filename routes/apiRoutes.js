@@ -11,8 +11,15 @@ module.exports = function(app) {
           password: password
         }
       }).then(function(data) {
-        console.log(data.dataValues);
-        var user = data.dataValues;
+        var user;
+        if(data !== null) {
+          user = data.dataValues;
+        }
+
+        if(data === null){
+          res.send("No user found")
+        }
+
         if (user.username === username && user.password === password) {
           req.session.loggedin = true;
           req.session.username = username;
@@ -35,6 +42,9 @@ module.exports = function(app) {
       firstName,
       lastName,
       email,
+      address,
+      city,
+      state,
       instruments,
       genres,
       bio
@@ -58,6 +68,9 @@ module.exports = function(app) {
           firstName,
           lastName,
           email,
+          address,
+          city,
+          state,
           instruments,
           genres,
           bio

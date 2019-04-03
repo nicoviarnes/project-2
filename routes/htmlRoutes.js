@@ -10,10 +10,14 @@ module.exports = function(app) {
     res.render("login");
   });
 
+  app.get("/map", function(req, res) {
+    res.render("map");
+  });
+
   app.get("/logout", function(req, res) {
     if (req.session.loggedin) {
-      req.session.loggedin = false
-      res.redirect("/")
+      req.session.loggedin = false;
+      res.redirect("/");
     } else {
       res.send("You are already logged out");
     }
@@ -26,7 +30,7 @@ module.exports = function(app) {
 
   app.get("/dashboard", function(req, res) {
     if (req.session.loggedin) {
-      return res.render("dashboard")
+      return res.render("dashboard");
     } else {
       res.send("Please login to view this page!");
     }

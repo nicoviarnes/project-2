@@ -10,6 +10,10 @@ module.exports = function(app) {
     return res.render("login");
   });
 
+  app.get("/map", function(req, res) {
+    res.render("map");
+  });
+
   app.get("/logout", function(req, res) {
     if (req.session.loggedin) {
       req.session.loggedin = false;

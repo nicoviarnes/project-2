@@ -3,7 +3,6 @@ var express = require("express");
 var exphbs = require("express-handlebars");
 var session = require("express-session");
 var bodyParser = require("body-parser");
-var path = require("path");
 
 var db = require("./models");
 
@@ -25,7 +24,6 @@ app.use(bodyParser.json());
 // app.use(express.urlencoded({ extended: false }));
 // app.use(express.json());
 app.use(express.static("public"));
-// app.use("/static", express.static(path.join(__dirname, "css")));
 
 // Handlebars
 app.engine(

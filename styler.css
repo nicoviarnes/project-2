@@ -1,0 +1,111 @@
+.hero-full-screen {
+    height: 100vh;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background: url("background6.jpeg") center center no-repeat;
+    background-size: cover;
+  } 
+  
+ 
+.floated-label-wrapperr {
+  position: relative;
+  }
+  
+  .floated-label-wrapperr label {
+    background: transparent;
+    color: pink;
+    background-color: pink;
+    font-size: 0.75rem;
+    font-weight: 600;
+    left: 0.75rem;
+    opacity: 0;
+    padding: 0 0.25rem;
+    position: absolute;
+    top: 2rem;
+    transition: all 0.15s ease-in;
+    z-index: -1;
+  }
+  
+  .floated-label-wrapperr label input[type=text],
+  .floated-label-wrapperr label input[type=email],
+  .floated-label-wrapperr label input[type=password] {
+    border-radius: 4px;
+    font-size: 1.75em;
+    padding: 0.5em;
+    background-color: pink;
+  }
+  
+  .floated-label-wrapperr label.show {
+    opacity: 1;
+    top: -0.85rem;
+    z-index: 1;
+    transition: all 0.15s ease-in;
+  }
+  
+  
+
+.menu-hover-linesl {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: all 0.35s ease;
+    font-family: 'Rock Salt', cursive, bold;
+    background-color: black
+  }
+  
+  .menu-hover-linesl li a {
+    padding: 0.75rem 0;
+    color: rgb(255, 0, 191);
+    position: relative;
+    margin-left: 1rem;
+  }
+  
+  .menu-hover-linesl li:first-child a {
+    background-color: black;
+    margin-left: 0;
+  }
+  
+  .menu-hover-linesl a:before,
+  .menu-hover-linesl a::after {
+    height: 3px;
+    position: absolute;
+    content: '';
+    transition: all 0.35s ease;
+    background-color: #ff00ff;
+    width: 0;
+  }
+  
+  .menu-hover-linesl a::before {
+    top: 0;
+    left: 0;
+    }
+  
+  .menu-hover-linesl a::after {
+    bottom: 0;
+    right: 0;
+  }
+  
+  .menu-hover-linesl a:hover,
+  .menu-hover-linesl li.active > a {
+    transition: all 0.35s ease;
+    color: white;
+  }
+  
+  .menu-hover-linesl a:hover::before,
+  .menu-hover-linesl .active a::before,
+  .menu-hover-linesl a:hover::after,
+  .menu-hover-linesl .active a::after {
+    width: 100%;
+  }
+  

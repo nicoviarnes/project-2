@@ -1,0 +1,21 @@
+
+.quickSearch {
+    margin: 5px 5px 10px 5px;
+    padding: 5px 5px 10px 5px;
+    border-style: solid;
+}
+
+.advancedSearch {
+    margin: 5px 5px 10px 5px;
+    padding: 5px 5px 10px 5px;
+    border-style: solid;
+}
+
+.remove {
+    float: right;
+}
+
+
+.add {
+    float: left;
+}

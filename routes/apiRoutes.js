@@ -35,6 +35,10 @@ module.exports = function(app) {
     }
   });
 
+  app.get("/map/api", function(req, res) {
+    res.send("hello map.js!")
+  });
+
   app.post("/register", function(req, res) {
     const {
       username,

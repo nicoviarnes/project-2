@@ -49,6 +49,11 @@ module.exports = function(app) {
     }
   });
 
+  // map  route
+  app.get("/map", function(req, res) {
+    return res.render("map");
+  });
+
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
     return res.render("404");

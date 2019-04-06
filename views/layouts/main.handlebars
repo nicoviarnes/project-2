@@ -5,27 +5,23 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
   <link rel="stylesheet" href="/styles/styles.css" media="screen" title="no title" charset="utf-8">
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="/js/index.js"></script>
-  <script src="/js/map.js"></script>
-  <link rel="stylesheet" href="public/styles/searchcss.css"/>
-  <link rel="stylesheet" href="public/styles/icons/foundation-icons.css">
-  <link rel="stylesheet" href="public/styles/foundation.css">
-  <link rel="stylesheet" href="public/styles/app.css">
-
+  {{!-- Google fonts --}}
+  <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700' rel='stylesheet'>
+    <!-- Mapbox JS-->
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+    {{!-- Mapbox CSS --}}
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+  {{!-- Map CSS --}}
+    <link href="../../styles/map.css" rel="stylesheet" type="text/css"/>
   <title>Home Page</title>
 </head>
 
 <body>
   {{{body}}}
-
-
-
-
-<script src="public/js/vendor/jquery.js"></script>
-<script src="public/js/vendor/foundation.js"></script>
-<script src="public/js/vendor/what-input.js"></script>
-<script src="public/js/app.js"></script>
+      {{!-- Map JS --}}
+    <script src="../../js/map.js"></script>
 </body>
 
 </html>

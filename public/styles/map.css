@@ -20,9 +20,9 @@ body {
   border: 3px solid black;
   position: absolute;
   left: 0%;
-  width: 200px;
-  height: 200px;
-  top: 140px;
+  width: 50%;
+  height: 50%;
+  top: 250px;
   left: 10px;
 }
 

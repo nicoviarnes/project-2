@@ -1,44 +1,61 @@
-//var db = require("../models");
+var db = require("../models");
 
 module.exports = function(app) {
   // Load index page
   app.get("/", function(req, res) {
-    res.render("index");
+    return res.render("index");
   });
 
+  // Login route
   app.get("/login", function(req, res) {
-    res.render("login");
+    return res.render("login");
   });
 
-  app.get("/map", function(req, res) {
-    res.render("map");
-  });
-
+  // Logout route
   app.get("/logout", function(req, res) {
     if (req.session.loggedin) {
       req.session.loggedin = false;
-      res.redirect("/");
+      return res.redirect("/");
     } else {
-      res.send("You are already logged out");
+      return res.send("You are already logged out");
     }
-    res.end();
   });
 
+  // Registration route
   app.get("/register", function(req, res) {
-    res.render("register");
+    return res.render("register");
   });
 
+  // User dashboard route, checks to see if user is logged in
   app.get("/dashboard", function(req, res) {
+    // Check loggedin boolean to see if loggedin = true
     if (req.session.loggedin) {
-      return res.render("dashboard");
+      var user;
+      db.User.findOne({
+        where: {
+          username: req.session.username
+        }
+      }).then(function(data) {
+        if (data !== null) {
+          user = data.dataValues;
+          return res.render("dashboard", user);
+        } else {
+          return res.send("Something went wrong!");
+        }
+      });
+      // if the user isn't logged in, throw an error message
     } else {
-      res.send("Please login to view this page!");
+      return res.send("Please login to view this page!");
     }
-    res.end();
+  });
+
+  // map  route
+  app.get("/map", function(req, res) {
+    return res.render("map");
   });
 
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
-    res.render("404");
+    return res.render("404");
   });
 };

@@ -17,22 +17,26 @@ module.exports = function(app) {
         }
 
         if(data === null){
-          res.send("No user found")
+          return res.send("No user found")
         }
 
         if (user.username === username && user.password === password) {
           req.session.loggedin = true;
           req.session.username = username;
-          res.redirect("/dashboard");
+          return res.redirect("/dashboard");
         } else {
-          res.send("Incorrect Username and/or Password!");
+          return res.send("Incorrect Username and/or Password!");
         }
         res.end();
       });
     } else {
-      res.send("Please enter Username and Password!");
+      return res.send("Please enter Username and Password!");
       res.end();
     }
+  });
+
+  app.get("/map/api", function(req, res) {
+    res.send("hello map.js!")
   });
 
   app.post("/register", function(req, res) {
@@ -77,10 +81,10 @@ module.exports = function(app) {
         }).then(result => {
           req.session.loggedin = true;
           req.session.username = username;
-          res.redirect("/dashboard");
+          return res.redirect("/dashboard");
         });
       } else {
-        res.send("That username is taken! Please choose another username.");
+        return res.send("That username is taken! Please choose another username.");
       }
     });
   });

@@ -12,39 +12,64 @@
     -webkit-justify-content: space-between;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    background: url("https://media.giphy.com/media/chvKmcycouQUg/giphy.gif") center center no-repeat;
+    background: url("../project-2/background3.jpg") center center no-repeat;
     background-size: cover;
   } 
   
- 
-.show-password {
-    width: 50%;
-  }
-  
-  .show-password label {
-    position: absolute;
-    left: -9999px;
-    text-indent: -9999px;
-  }
-  
-  .password-wrapper {
-    position: relative;
-  }
-  
-  
-  
- 
-  
-  
+  .login-form {
+    width: 300px;
+    margin: 0 auto;
+    font-family: Tahoma, Geneva, sans-serif;
+}
 
-.menu-hover-linesl {
+.login-form h1 {
+    text-align: center;
+    color: #f700ff;
+    font-family: 'Rock Salt', cursive, bold;
+    font-size: 300%;
+    padding: 20px 0 20px 0;
+    text-shadow:
+    -1.0px -1.0px 0 rgb(34, 255, 5),
+        1.0px -1.0px 0 rgb(34, 255, 5),
+        -1.0px 1.0px 0 rgb(34, 255, 5),
+        1.0px 1.0px 0 rgb(34, 255, 5);
+}
+
+.login-form input[type="password"],
+.login-form input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #dddddd;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.login-form input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, .5);
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 250%;
+    font-family: 'Rock Salt', cursive, bold;
+    color: #f700ff;
+    text-shadow:
+    -1.0px -1.0px 0 rgb(34, 255, 5),
+        1.0px -1.0px 0 rgb(34, 255, 5),
+        -1.0px 1.0px 0 rgb(34, 255, 5),
+        1.0px 1.0px 0 rgb(34, 255, 5);
+}
+  
+  .menu-hover-linesl {
     text-align: center;
     text-transform: uppercase;
     font-weight: 500;
     letter-spacing: 1px;
     transition: all 0.35s ease;
     font-family: 'Rock Salt', cursive, bold;
-    background-color: black
+    background-color: black;
   }
   
   .menu-hover-linesl li a {
@@ -83,6 +108,11 @@
   .menu-hover-linesl li.active > a {
     transition: all 0.35s ease;
     color: white;
+    text-shadow:
+    -1.0px -1.0px 0 rgb(255, 5, 243),
+        1.0px -1.0px 0 rgb(255, 5, 243),
+        -1.0px 1.0px 0 rgb(255, 5, 243),
+        1.0px 1.0px 0 rgb(255, 5, 243);
   }
   
   .menu-hover-linesl a:hover::before,

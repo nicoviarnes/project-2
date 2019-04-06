@@ -18,9 +18,14 @@
   
  .middle-content-section {
     text-align: center;
-    color:  #ff00b3;
+    color: #f700ff;
     font-family: 'Rock Salt', cursive, bold;
     font-size: 300%;
+    text-shadow:
+    -1.0px -1.0px 0 rgb(34, 255, 5),
+        1.0px -1.0px 0 rgb(34, 255, 5),
+        -1.0px 1.0px 0 rgb(34, 255, 5),
+        1.0px 1.0px 0 rgb(34, 255, 5);
   }
 /* Nav Bar Background */
 .menu-hover-linesl {
@@ -69,6 +74,11 @@
 .menu-hover-linesl li.active > a {
   transition: all 0.35s ease;
   color: white;
+  text-shadow:
+  -1.0px -1.0px 0 rgb(255, 5, 243),
+      1.0px -1.0px 0 rgb(255, 5, 243),
+      -1.0px 1.0px 0 rgb(255, 5, 243),
+      1.0px 1.0px 0 rgb(255, 5, 243);
 }
 
 .menu-hover-linesl a:hover::before,

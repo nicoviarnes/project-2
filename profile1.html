@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foundation Sandbox</title>
-    <link rel="stylesheet" href="../project-2/stylel.css">
+    <link rel="stylesheet" href="../project-2/stylep.css">
     <link rel="SCSS" href="C:\Users\SexyBoi\Desktop\front-end\scss.scss">
     <link rel="javascript" href="C:\Users\SexyBoi\Desktop\front-end\javascript.js">
     <link rel="stylesheet" href="css/icons/foundation-icons.css">
@@ -19,9 +19,9 @@
    <ul class="menu menu-hover-linesl">
     <li class="active"><a href="#">Home</a></li>
     <li><a href="#">The Mission</a></li>
+    <li><a href="#">Log in</a></li>
     <li><a href="#">Sign Up!</a></li>
     <li><a href="#">Find Your Band Mates!</a></li>
-    <li><a href="#">Profile</a></li>
   </ul>
 
   <div class="hero-full-screen">
@@ -29,19 +29,31 @@
     
   <br>
   <br>
-  <div class="login-form">
-    <h1>Login!!</h1>
-    <form action="auth" method="POST">
-        <input type="text" name="username" placeholder="Username" required>
-        <input type="password" name="password" placeholder="Password" required>
-        <input type="submit">
-    </form>
-</div>
-  
-  
     
+  <div id="home">
+    <div class="container">
+      <div class="row">
+        <div class="col-8 offset-2">
+          <h1>Welcome {{username}}</h1>
+          <p>Bio: {{bio}}</p>
+          <hr>
+          <p>I play these instruments: </p>
+          <ul style="list-style: none;">
+              <li>{{instruments}}</li>
+          </ul>
+          <hr>
+          <p>I'm into these genres: </p>
+          <ul style="list-style: none;">
+              <li>{{genres}}</li>
+          </ul>
+          <hr>
+          <a href="/logout">Logout</a>
   
-  
+        </div>
+      </div>
+    </div>
+  </div>
+    
   
   <div id="main-content-section" data-magellan-target="main-content-section">
   </div>
@@ -50,9 +62,10 @@
   
   
 
-    <script src="C:\Users\SexyBoi\Desktop\Index\javal.js"></script>
+    <script src="C:\Users\SexyBoi\Desktop\Index\javascript.js"></script>
     <script src="js/vendor/what-input.js"></script>
     <script src="js/vendor/foundation.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>
+

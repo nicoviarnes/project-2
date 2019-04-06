@@ -5,7 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foundation Sandbox</title>
-    <link rel="stylesheet" href="C:\Users\SexyBoi\Desktop\front-end\styler.css">
+    <link rel="stylesheet" href="../project-2/styler.css">
     <link rel="SCSS" href="C:\Users\SexyBoi\Desktop\front-end\scss.scss">
     <link rel="javascript" href="C:\Users\SexyBoi\Desktop\front-end\javascript.js">
     <link rel="stylesheet" href="css/icons/foundation-icons.css">
@@ -18,9 +18,9 @@
    <!-- the trigger -->
    <ul class="menu menu-hover-linesl">
     <li class="active"><a href="#">Home</a></li>
-    <li><a href="#">About Us</a></li>
+    <li><a href="#">The Mission</a></li>
     <li><a href="#">Log in</a></li>
-    <li><a href="#">Find a Band Mate</a></li>
+    <li><a href="#">Find Your Band Mates!</a></li>
     <li><a href="#">Profile</a></li>
   </ul>
 
@@ -30,23 +30,23 @@
   <br>
   <br>
     
-  <form class="callout text-center">
-      <h2>Become a Member</h2>
-      <div class="floated-label-wrapperr">
-        <label for="full-name">Full name</label>
-        <input type="text" id="full-name" name="full name input" placeholder="Full name">
-      </div>
-      <div class="floated-label-wrapperr">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email input" placeholder="Email">
-      </div>
-      <div class="floated-label-wrapperr">
-        <label for="pass">Password</label>
-        <input type="password" id="pass" name="password input" placeholder="Password">
-      </div>
-      <input class="button expanded" type="submit" value="Sign up">
+  <div class="register-form">
+    <h1>Registration</h1>
+    <form action="register" method="POST">
+        <input type="text" name="username" placeholder="Username" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <input type="text" name="firstName" placeholder="First Name" required>
+        <input type="text" name="lastName" placeholder="Last Name" required>
+        <input type="email" name="email" placeholder="email" required>
+        <input type="text" name="address" placeholder="Street Address">
+        <input type="text" name="city" placeholder="City">
+        <input type="text" name="state" placeholder="State">
+        <input type="text" name="instruments" placeholder="Instruments" required>
+        <input type="text" name="genres" placeholder="Genres">
+        <input type="text" name="bio" placeholder="Bio">
+        <input type="submit" id="register">
     </form>
-    
+</div>
     
   
   <div id="main-content-section" data-magellan-target="main-content-section">

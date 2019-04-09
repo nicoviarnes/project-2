@@ -1,0 +1,83 @@
+/* background */
+.hero-full-screen-r {
+    height: 100%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background: url("../images/background6.jpeg") center center no-repeat;
+    background-size: cover;
+  } 
+  /* css for boxes */
+  .register-form {
+    width: 300px;
+    margin: 0 auto;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+
+.register-form h1{
+    text-align: center;
+    color:  #f700ff;
+    padding: 300px;
+    width: 100%;
+    font-family: 'Rock Salt', cursive, bold;
+    font-size: 300%;
+    padding: 20px 0 20px 0;
+    text-shadow:
+    -1.0px -1.0px 0 rgb(34, 255, 5),
+        1.0px -1.0px 0 rgb(34, 255, 5),
+        -1.0px 1.0px 0 rgb(34, 255, 5),
+        1.0px 1.0px 0 rgb(34, 255, 5);
+}
+
+
+.register-form h4{
+  text-align: center;
+  color:  #f700ff;
+  padding: 300px;
+  width: 100%;
+  font-family: 'Rock Salt', cursive, bold;
+  font-size: 150%;
+  padding: 20px 0 20px 0;
+  text-shadow:
+  -1.0px -1.0px 0 rgb(34, 255, 5),
+      1.0px -1.0px 0 rgb(34, 255, 5),
+      -1.0px 1.0px 0 rgb(34, 255, 5),
+      1.0px 1.0px 0 rgb(34, 255, 5);
+}
+
+.register-form input[type="password"],
+.register-form input[type="email"],
+.register-form input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid white;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.register-form input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, .5);
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: 'Rock Salt', cursive, bold;
+    font-size: 300%;
+    color: #f700ff;
+    text-shadow:
+    -1.0px -1.0px 0 rgb(34, 255, 5),
+        1.0px -1.0px 0 rgb(34, 255, 5),
+        -1.0px 1.0px 0 rgb(34, 255, 5),
+        1.0px 1.0px 0 rgb(34, 255, 5);
+}

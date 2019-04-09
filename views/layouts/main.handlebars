@@ -3,29 +3,55 @@
 
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+
   <link rel="stylesheet" href="/styles/styles.css" media="screen" title="no title" charset="utf-8">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <link href="https://fonts.googleapis.com/css?family=Rock+Salt" rel="stylesheet">
+  <link rel="stylesheet" href="styles/scss.scss" />
+  <link rel="stylesheet" href="styles/icons/foundation-icons.css">
+  <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/stylel.css">
+  <link rel="stylesheet" href="styles/stylep.css">
+  <link rel="stylesheet" href="styles/styler.css">
+  <link rel="stylesheet" href="styles/app.css">
+  <link rel="stylesheet" href="styles/foundation.css">
+
+  <!-- Mapbox JS-->
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
+  {{!-- Mapbox CSS --}}
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.css' rel='stylesheet' />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.3/dist/css/foundation.min.css"
+    integrity="sha256-xpOKVlYXzQ3P03j397+jWFZLMBXLES3IiryeClgU5og= sha384-gP4DhqyoT9b1vaikoHi9XQ8If7UNLO73JFOOlQV1RATrA7D0O7TjJZifac6NwPps sha512-AKwIib1E+xDeXe0tCgbc9uSvPwVYl6Awj7xl0FoaPFostZHOuDQ1abnDNCYtxL/HWEnVOMrFyf91TDgLPi9pNg=="
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="styles/searchcss.css" />
+
   <script src="/js/index.js"></script>
   <script src="/js/map.js"></script>
-  <link rel="stylesheet" href="public/styles/searchcss.css"/>
-  <link rel="stylesheet" href="public/styles/icons/foundation-icons.css">
-  <link rel="stylesheet" href="public/styles/foundation.css">
-  <link rel="stylesheet" href="public/styles/app.css">
+  <script src="/js/search.js"></script>
+  <link rel="stylesheet" href="styles/map.css">
 
-  <title>Home Page</title>
+
+  <title>{{foo}}</title>
 </head>
 
 <body>
+  <ul class="menu align-center menu-hover-linesl">
+    <li style="margin-left: 15px; margin-right: 15px"><a href="/">Home</a></li>
+    <li style="margin-left: 15px; margin-right: 15px"><a href="/dashboard">Profile</a></li>
+    <li style="margin-left: 15px; margin-right: 15px"><a href="/map">Map</a></li>
+    <li style="margin-left: 15px; margin-right: 15px"><a href="/search">Find a Band Mate</a></li>
+    <li style="margin-left: 15px; margin-right: 15px"><a href="/register">Register</a></li>
+    <li style="margin-left: 15px; margin-right: 15px"><a href="/login">Log in</a></li>
+    <li style="margin-left: 15px; margin-right: 15px"><a href="/logout">Logout</a></li>
+  </ul>
+
   {{{body}}}
 
-
-
-
-<script src="public/js/vendor/jquery.js"></script>
-<script src="public/js/vendor/foundation.js"></script>
-<script src="public/js/vendor/what-input.js"></script>
-<script src="public/js/app.js"></script>
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/vendor/foundation.js"></script>
+  <script src="js/vendor/what-input.js"></script>
+  <script src="js/app.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,71 @@
+.hero-full-screen-d {
+    height: 100%;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background: url("../images/background2.jpg") center center no-repeat;
+    background-size: cover;
+  } 
+  
+  .container h1 {
+    text-align: center;
+    color:  #f700ff;
+    font-family: 'Rock Salt', cursive, bold;
+    font-size: 300%;
+    text-shadow:
+ -1.0px -1.0px 0 rgb(34, 255, 5),
+     1.0px -1.0px 0 rgb(34, 255, 5),
+     -1.0px 1.0px 0 rgb(34, 255, 5),
+     1.0px 1.0px 0 rgb(34, 255, 5);
+  }
+ 
+.container p {
+    text-align: center;
+    color: #f700ff;
+    font-family: 'Rock Salt', cursive;
+    font-size: 300%;
+    text-shadow:
+    -1.0px -1.0px 0 rgb(34, 255, 5),
+        1.0px -1.0px 0 rgb(34, 255, 5),
+        -1.0px 1.0px 0 rgb(34, 255, 5),
+        1.0px 1.0px 0 rgb(34, 255, 5);
+  }
+  
+  .container li {
+    text-align: center;
+    color:  #f700ff;
+    font-family: 'Rock Salt', cursive;
+    font-size: 300%;
+    text-shadow:
+    -1.0px -1.0px 0 rgb(34, 255, 5),
+        1.0px -1.0px 0 rgb(34, 255, 5),
+        -1.0px 1.0px 0 rgb(34, 255, 5),
+        1.0px 1.0px 0 rgb(34, 255, 5);
+  }
+  
+  .container a {
+    width: 100%;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, .5);
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 250%;
+    font-family: 'Rock Salt', cursive;
+    color: #f700ff;
+    text-shadow:
+    -1.0px -1.0px 0 rgb(34, 255, 5),
+        1.0px -1.0px 0 rgb(34, 255, 5),
+        -1.0px 1.0px 0 rgb(34, 255, 5),
+        1.0px 1.0px 0 rgb(34, 255, 5);
+  }

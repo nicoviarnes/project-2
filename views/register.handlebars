@@ -1,53 +1,37 @@
-<style>
-    .register-form {
-        width: 300px;
-        margin: 0 auto;
-        font-family: Tahoma, Geneva, sans-serif;
-    }
-
-    .register-form h1 {
-        text-align: center;
-        color: #4d4d4d;
-        font-size: 24px;
-        padding: 20px 0 20px 0;
-    }
-
-    .register-form input[type="password"],
-    .register-form input[type="email"],
-    .register-form input[type="text"] {
-        width: 100%;
-        padding: 15px;
-        border: 1px solid #dddddd;
-        margin-bottom: 15px;
-        box-sizing: border-box;
-    }
-
-    .register-form input[type="submit"] {
-        width: 100%;
-        padding: 15px;
-        background-color: #535b63;
-        border: 0;
-        box-sizing: border-box;
-        cursor: pointer;
-        font-weight: bold;
-        color: #ffffff;
-    }
-</style>
-
-<div class="register-form">
-    <h1>Registration</h1>
-    <form action="register" method="POST">
-        <input type="text" name="username" placeholder="Username" required>
-        <input type="password" name="password" placeholder="Password" required>
-        <input type="text" name="firstName" placeholder="First Name" required>
-        <input type="text" name="lastName" placeholder="Last Name" required>
-        <input type="email" name="email" placeholder="email" required>
-        <input type="text" name="address" placeholder="Street Address">
-        <input type="text" name="city" placeholder="City">
-        <input type="text" name="state" placeholder="State">
-        <input type="text" name="instruments" placeholder="Instruments" required>
-        <input type="text" name="genres" placeholder="Genres">
-        <input type="text" name="bio" placeholder="Bio">
-        <input type="submit" id="register">
-    </form>
+<div class="hero-full-screen-r">
+    <br>
+    <br>
+    <div class="register-form">
+        <h1>Register</h1>
+        <form action="register" method="POST">
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="text" name="firstName" placeholder="First Name" required>
+            <input type="text" name="lastName" placeholder="Last Name" required>
+            <input type="email" name="email" placeholder="email" required>
+            <input type="text" name="address" placeholder="Street Address">
+            <input type="text" name="city" placeholder="City">
+            <input type="text" name="state" placeholder="State">
+            <label>
+                <h4>What instrument do you play?</h4>
+                <select name="instruments" required>
+                    <option value="guitarist">Guitar</option>
+                    <option value="vocalist">Vocals</option>
+                    <option value="bassist">Bass</option>
+                    <option value="drummer">Drums</option>
+                </select>
+            </label>
+            <label>
+                <h4>What kind of music do you want to play?</h4>
+                <select name="genres" required>
+                    <option value="rock">Rock</option>
+                    <option value="jazz">Jazz</option>
+                    <option value="metal">Metal</option>
+                    <option value="country">Country</option>
+                </select>
+            </label>
+            <input type="text" name="bio" placeholder="Bio">
+            <input type="submit" id="register">
+        </form>
+    </div>
 </div>

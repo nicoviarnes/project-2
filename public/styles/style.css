@@ -1,0 +1,79 @@
+.hero-full-screen-h {
+    height: 100vh;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background: url("https://media.giphy.com/media/chvKmcycouQUg/giphy.gif") center center no-repeat;
+    background-size: cover;
+  } 
+  
+ .middle-content-section {
+    text-align: center;
+    color:  #ff00b3;
+    font-family: 'Rock Salt', cursive, bold;
+    font-size: 300%;
+  }
+/* Nav Bar Background */
+.menu-hover-linesl {
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 1px;
+  transition: all 0.35s ease;
+  font-family: 'Rock Salt', cursive, bold;
+  background-color: black;
+}
+
+.menu-hover-linesl li a {
+  padding: 0.75rem 0;
+  color: rgb(255, 0, 191);
+  position: relative;
+  margin-left: 1rem;
+}
+
+.menu-hover-linesl li:first-child a {
+  background-color: black;
+  margin-left: 0;
+}
+
+.menu-hover-linesl a:before,
+.menu-hover-linesl a::after {
+  height: 3px;
+  position: absolute;
+  content: '';
+  transition: all 0.35s ease;
+  background-color: #ff00ff;
+  width: 0;
+}
+
+.menu-hover-linesl a::before {
+  top: 0;
+  left: 0;
+  }
+
+.menu-hover-linesl a::after {
+  bottom: 0;
+  right: 0;
+}
+
+.menu-hover-linesl a:hover,
+.menu-hover-linesl li.active > a {
+  transition: all 0.35s ease;
+  color: white;
+}
+
+.menu-hover-linesl a:hover::before,
+.menu-hover-linesl .active a::before,
+.menu-hover-linesl a:hover::after,
+.menu-hover-linesl .active a::after {
+  width: 100%;
+}

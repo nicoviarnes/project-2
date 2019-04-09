@@ -48,8 +48,6 @@ const newUser = event => {
     bio: $bio
   };
 
-  console.log(user);
-
   $.post("/register", user);
 };
 

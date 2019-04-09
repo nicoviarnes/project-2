@@ -1,21 +1,70 @@
-
 .quickSearch {
-    margin: 5px 5px 10px 5px;
-    padding: 5px 5px 10px 5px;
-    border-style: solid;
+  margin: 5px 5px 10px 5px;
+  padding: 5px 5px 10px 5px;
+  border-style: solid;
+  background-color: black;
 }
 
 .advancedSearch {
-    margin: 5px 5px 10px 5px;
-    padding: 5px 5px 10px 5px;
-    border-style: solid;
+  margin: 5px 5px 10px 5px;
+  padding: 5px 5px 10px 5px;
+  border-style: solid;
 }
 
 .remove {
-    float: right;
+  float: right;
 }
 
-
 .add {
-    float: left;
+  float: left;
+}
+
+.quickSearch h3 {
+  text-align: center;
+  color: #f700ff;
+  font-family: "Rock Salt", cursive, bold;
+  font-size: 300%;
+  width: 100%;
+  text-shadow: -1px -1px 0 rgb(34, 255, 5), 1px -1px 0 rgb(34, 255, 5),
+    -1px 1px 0 rgb(34, 255, 5), 1px 1px 0 rgb(34, 255, 5);
+}
+.quickProfile tr{
+    background-color: black;
+    color: white;
+}
+
+.quickProfile td{
+    background-color: black;
+    color: white;
+}
+
+.searchRes {
+    text-align: center;
+   width: 100%;
+   margin-left: -10%;
+   border: 3px solid #f700ff;
+   box-shadow: -1px -1px 0 rgb(34, 255, 5), 1px -1px 0 rgb(34, 255, 5),
+   -1px 1px 0 rgb(34, 255, 5), 1px 1px 0 rgb(34, 255, 5);
+}
+.searchRes a {
+    text-align: center;
+    color: #f700ff;
+    font-family: "Rock Salt", cursive, bold;
+    font-size: 300%;
+    width: 100%;
+    text-shadow: -1px -1px 0 rgb(34, 255, 5), 1px -1px 0 rgb(34, 255, 5),
+      -1px 1px 0 rgb(34, 255, 5), 1px 1px 0 rgb(34, 255, 5);
+}
+
+.maintitle {
+    color: #f700ff;
+    text-shadow: -1px -1px 0 rgb(34, 255, 5), 1px -1px 0 rgb(34, 255, 5),
+    -1px 1px 0 rgb(34, 255, 5), 1px 1px 0 rgb(34, 255, 5);
+}
+
+.maintitle :hover {
+    
+    font-size: 200%;
+    text-shadow: -1px -1px 0 rgb(34, 255, 5), 1px -1px 0 rgb(34, 255, 5),
+    -1px 1px 0 rgb(34, 255, 5), 1px 1px 0 rgb(34, 255, 5);
 }

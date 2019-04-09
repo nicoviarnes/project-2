@@ -51,7 +51,11 @@ module.exports = function(app) {
       state,
       instruments,
       genres,
-      bio
+      bio,
+   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      longitude,
+      latitude
+    // / ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     } = req.body;
 
     db.User.findOne({
@@ -77,7 +81,11 @@ module.exports = function(app) {
           state,
           instruments,
           genres,
-          bio
+          bio,
+          // ~~~~~~~~~~~~~~~~~~~~~~
+          longitude,
+          latitude
+          // ~~~~~~~~~~~~~~~~~~~~~~
         }).then(result => {
           req.session.loggedin = true;
           req.session.username = username;

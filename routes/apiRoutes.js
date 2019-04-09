@@ -162,9 +162,8 @@ module.exports = function(app) {
                   return console.log(error);
                 } else {
                   console.log("Message sent: " + info.response);
-                  res.send(200);
+                  return res.redirect("/dashboard");
                 }
-                return res.redirect("/dashboard");
               }
             );
           });

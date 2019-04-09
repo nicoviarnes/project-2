@@ -91,7 +91,7 @@ module.exports = function(app) {
       // / ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     } = req.body;
 
-    var apiKey = "ed1b14de60384d15bb845d74cb10d41f";
+    var apiKey = "your_key_here";
 
     var url = `https://api.opencagedata.com/geocode/v1/json?key=${apiKey}&q=${address}%20${city}%20${state}&pretty=1`;
 

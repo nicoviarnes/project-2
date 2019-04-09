@@ -1,14 +1,14 @@
 {
   "development": {
     "username": "root",
-    "password": "root",
+    "password": "@Sunb1x!@",
     "database": "jamsesh",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "root",
+    "password": null,
     "database": "testdb",
     "host": "localhost",
     "dialect": "mysql",

@@ -10,7 +10,6 @@ var app = express();
 var PORT = process.env.PORT || 3000;
 
 // Middleware
-
 app.use(
   session({
     secret: "secret",
@@ -21,9 +20,7 @@ app.use(
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// app.use(express.urlencoded({ extended: false }));
-// app.use(express.json());
-app.use(express.static("public"));
+app.use(express.static("public", app.session));
 
 // Handlebars
 app.engine(
@@ -40,7 +37,7 @@ require("./routes/htmlRoutes")(app);
 
 var syncOptions = { force: false };
 
-// If running a test, set syncOptions.force to true
+// If running a test, set syncOptions.fforce to true
 // clearing the `testdb`
 if (process.env.NODE_ENV === "test") {
   syncOptions.force = true;

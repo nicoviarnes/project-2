@@ -1,0 +1,77 @@
+.hero-full-screen-l {
+    height: 100vh;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    background: url("../images/background3.jpg") center center no-repeat;
+    background-size: cover;
+  } 
+  
+  .login-form {
+    width: 300px;
+    margin: 0 auto;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+
+.oops p{
+  text-align: center;
+  color: #f700ff;
+  font-family: 'Rock Salt', cursive, bold;
+  font-size: 300%;
+  padding: 20% 0 0 0;
+  width: 100%;
+  text-shadow:
+  -1.0px -1.0px 0 rgb(34, 255, 5),
+      1.0px -1.0px 0 rgb(34, 255, 5),
+      -1.0px 1.0px 0 rgb(34, 255, 5),
+      1.0px 1.0px 0 rgb(34, 255, 5);
+}
+
+.login-form h1 {
+    text-align: center;
+    color: #f700ff;
+    font-family: 'Rock Salt', cursive, bold;
+    font-size: 300%;
+    padding: 20px 0 20px 0;
+    text-shadow:
+    -1.0px -1.0px 0 rgb(34, 255, 5),
+        1.0px -1.0px 0 rgb(34, 255, 5),
+        -1.0px 1.0px 0 rgb(34, 255, 5),
+        1.0px 1.0px 0 rgb(34, 255, 5);
+}
+
+.login-form input[type="password"],
+.login-form input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #dddddd;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+.login-form input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, .5);
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 250%;
+    font-family: 'Rock Salt', cursive, bold;
+    color: #f700ff;
+    text-shadow:
+    -1.0px -1.0px 0 rgb(34, 255, 5),
+        1.0px -1.0px 0 rgb(34, 255, 5),
+        -1.0px 1.0px 0 rgb(34, 255, 5),
+        1.0px 1.0px 0 rgb(34, 255, 5);
+}

@@ -1,4 +1,5 @@
 var db = require("../models");
+var axios = require("axios");
 
 module.exports = function(app) {
   app.post("/auth", function(req, res) {
@@ -12,12 +13,12 @@ module.exports = function(app) {
         }
       }).then(function(data) {
         var user;
-        if(data !== null) {
+        if (data !== null) {
           user = data.dataValues;
         }
 
-        if(data === null){
-          return res.send("No user found")
+        if (data === null) {
+          return res.render("oops5");
         }
 
         if (user.username === username && user.password === password) {
@@ -25,18 +26,51 @@ module.exports = function(app) {
           req.session.username = username;
           return res.redirect("/dashboard");
         } else {
-          return res.send("Incorrect Username and/or Password!");
+          return res.render("oops5");
         }
         res.end();
       });
     } else {
-      return res.send("Please enter Username and Password!");
+      return res.render("oops5");
       res.end();
     }
   });
 
+  app.post("/api/search", function(req, res) {
+    db.User.findAll({
+      where: {
+        instruments: req.body.instrument,
+        genres: req.body.genre
+      }
+    }).then(function(data) {
+      return res.send(data);
+    });
+  });
+
   app.get("/map/api", function(req, res) {
-    res.send("hello map.js!")
+    db.User.findAll({}).then(function(data) {
+      res.send(data);
+    });
+  });
+
+  app.get("/user/:username", function(req, res) {
+    if (req.session.loggedin) {
+      var user = req.params.username;
+      db.User.findOne({
+        where: {
+          username: user
+        }
+      }).then(function(data) {
+        if (data !== null) {
+          user = data.dataValues;
+          return res.render("userprofile", user);
+        } else {
+          return res.render("oops6");
+        }
+      });
+    } else {
+      return res.render("oops");
+    }
   });
 
   app.post("/register", function(req, res) {
@@ -51,49 +85,53 @@ module.exports = function(app) {
       state,
       instruments,
       genres,
-      bio,
-   // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-      longitude,
-      latitude
-    // / ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      bio
+      // / ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     } = req.body;
 
-    db.User.findOne({
-      where: {
-        username
-      }
-    }).then(function(data) {
-      console.log(data);
-      var user;
-      if(data !== null) {
-        user = data.dataValues;
-      }
-      
-      if (data === null || user.username === null) {
-        db.User.create({
-          username,
-          password,
-          firstName,
-          lastName,
-          email,
-          address,
-          city,
-          state,
-          instruments,
-          genres,
-          bio,
-          // ~~~~~~~~~~~~~~~~~~~~~~
-          longitude,
-          latitude
-          // ~~~~~~~~~~~~~~~~~~~~~~
-        }).then(result => {
-          req.session.loggedin = true;
-          req.session.username = username;
-          return res.redirect("/dashboard");
-        });
-      } else {
-        return res.send("That username is taken! Please choose another username.");
-      }
+    var apiKey = "ed1b14de60384d15bb845d74cb10d41f";
+
+    var url = `https://api.opencagedata.com/geocode/v1/json?key=${apiKey}&q=${address}%20${city}%20${state}&pretty=1`;
+
+    axios.get(url).then(data => {
+      var lng = data.data.results[0].geometry.lat;
+      var lat = data.data.results[0].geometry.lng;
+      db.User.findOne({
+        where: {
+          username
+        }
+      }).then(function(data) {
+        var user;
+        if (data !== null) {
+          user = data.dataValues;
+        }
+
+        if (data === null || user.username === null) {
+          db.User.create({
+            username,
+            password,
+            firstName,
+            lastName,
+            email,
+            address,
+            city,
+            state,
+            instruments,
+            genres,
+            bio,
+            // ~~~~~~~~~~~~~~~~~~~~~~
+            longitude: lng,
+            latitude: lat
+            // ~~~~~~~~~~~~~~~~~~~~~~
+          }).then(result => {
+            req.session.loggedin = true;
+            req.session.username = username;
+            return res.redirect("/dashboard");
+          });
+        } else {
+          return res.render("oops7");
+        }
+      });
     });
   });
 };

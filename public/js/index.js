@@ -1,26 +1,3 @@
-// This grabs the users lat long based on current location ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-var options = {
-  enableHighAccuracy: true,
-  timeout: 5000,
-  maximumAge: 0
-};
-
-function success(pos) {
-  var crd = pos.coords;
-
-  console.log('Your current position is:');
-  console.log(`Latitude : ${crd.latitude}`);
-  console.log(`Longitude: ${crd.longitude}`);
-  console.log(`More or less ${crd.accuracy} meters.`);
-}
-
-function error(err) {
-  console.warn(`ERROR(${err.code}): ${err.message}`);
-}
-
-navigator.geolocation.getCurrentPosition(success, error, options);
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 const newUser = event => {
   event.preventDefault();
   var $username = $("#username")
@@ -57,11 +34,6 @@ const newUser = event => {
     .val()
     .trim();
 
-  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-  var $latitude = crd.latitude;
-  var $longitude = crd.longitude;
-  // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
   let user = {
     username: $username,
     password: $password,
@@ -73,14 +45,8 @@ const newUser = event => {
     state: $state,
     instruments: $instruments,
     genres: $genres,
-    bio: $bio,
-    // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-    latitude: $latitude,
-    longitude: $longitude
-    // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    bio: $bio
   };
-
-  console.log(user);
 
   $.post("/register", user);
 };

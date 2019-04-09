@@ -8,6 +8,9 @@ module.exports = function(app) {
 
   // Login route
   app.get("/login", function(req, res) {
+    if (req.session.loggedin) {
+      return res.render("oops2");
+    }
     return res.render("login");
   });
 
@@ -17,13 +20,17 @@ module.exports = function(app) {
       req.session.loggedin = false;
       return res.redirect("/");
     } else {
-      return res.send("You are already logged out");
+      return res.render("oops3");
     }
   });
 
   // Registration route
   app.get("/register", function(req, res) {
-    return res.render("register");
+    if (req.session.loggedin) {
+      return res.render("oops2");
+    } else {
+      return res.render("register");
+    }
   });
 
   // User dashboard route, checks to see if user is logged in
@@ -40,18 +47,31 @@ module.exports = function(app) {
           user = data.dataValues;
           return res.render("dashboard", user);
         } else {
-          return res.send("Something went wrong!");
+          return res.render("oops4");
         }
       });
       // if the user isn't logged in, throw an error message
     } else {
-      return res.send("Please login to view this page!");
+      return res.render("oops");
     }
   });
 
   // map  route
   app.get("/map", function(req, res) {
-    return res.render("map");
+    if (req.session.loggedin) {
+      return res.render("map");
+    } else {
+      return res.render("oops");
+    }
+  });
+
+  // search  route
+  app.get("/search", function(req, res) {
+    if (req.session.loggedin) {
+      return res.render("search");
+    } else {
+      return res.render("oops");
+    }
   });
 
   // Render 404 page for any unmatched routes

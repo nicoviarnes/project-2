@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "@Sunb1x!@",
+    "password": "root",
     "database": "jamsesh",
     "host": "localhost",
     "dialect": "mysql"

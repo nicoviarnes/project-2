@@ -1,5 +1,7 @@
 var db = require("../models");
 var axios = require("axios");
+var nodemailer = require("nodemailer");
+var smtpTransport = require("nodemailer-smtp-transport");
 
 module.exports = function(app) {
   app.post("/auth", function(req, res) {
@@ -126,7 +128,42 @@ module.exports = function(app) {
           }).then(result => {
             req.session.loggedin = true;
             req.session.username = username;
-            return res.redirect("/dashboard");
+
+            var transporter = nodemailer.createTransport(
+              smtpTransport({
+                service: "Gmail",
+                host: "smtp.gmail.com",
+                port: 465,
+                auth: {
+                  user: "jamseshxyz@gmail.com",
+                  pass: "J@ms3shxyz"
+                },
+                tls: {
+                  rejectUnauthorized: false
+                }
+              })
+            );
+
+            transporter.sendMail(
+              {
+                from: "jamseshxyz@gmail.com",
+                subject: "Welcome to JamSesh!",
+                to: email,
+                html: `
+                  <h1>Welcome to JamSesh.xyz!</h1>
+                  <p>Hi ${username}! Thanks for joining us at JamSesh.xyz! We hope you find some radical band mates to jam with!</p>
+                  <br>
+                  <p>Sincerely,<br>
+                    The JamSesh Team</p
+                `
+              },
+              function(error, info) {
+                if (error) {
+                  return console.log(error);
+                }
+                return res.redirect("/dashboard");
+              }
+            );
           });
         } else {
           return res.render("oops7");

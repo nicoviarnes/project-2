@@ -65,7 +65,7 @@ $(document).ready(function() {
           $(el).css("background-image", "url(../images/vocalPin.png)");
           break;
         case "drummer":
-          $(el).css("background-image", "url(../images/drumsPin.png)");
+          $(el).css("background-image", "url(../images/drumsPin2.png)");
           break;
       }
 

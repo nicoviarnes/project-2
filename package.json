@@ -18,6 +18,8 @@
     "express-handlebars": "^3.0.0",
     "express-session": "^1.15.6",
     "mysql2": "^1.6.4",
+    "nodemailer": "^6.1.0",
+    "nodemailer-smtp-transport": "^2.7.4",
     "path": "^0.12.7",
     "sequelize": "^4.41.2"
   },

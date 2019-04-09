@@ -1,7 +1,7 @@
 $(document).ready(function() {
   // MapBox access token
   mapboxgl.accessToken =
-    "pk.eyJ1IjoiNm4yciIsImEiOiJjanR2dTVrcHgxczl6NDVwaWhsZnZmYmluIn0.IUrjr1At8xiyqHacqoV6fg";
+    "your_key_here";
 
   // Inital map display, removes MapBox JS errors
   var map = new mapboxgl.Map({
